@@ -1,26 +1,134 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kBw-1h-jRv">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SocialMediaDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ms7-gM-Yaa">
+                                <rect key="frame" x="10" y="94" width="300" height="474"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" verticalHuggingPriority="251" verticalCompressionResistancePriority="49" text="Type your message.." translatesAutoresizingMaskIntoConstraints="NO" id="l4k-0k-qxS">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="144.5"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wbd-dN-xvn">
+                                        <rect key="frame" x="0.0" y="164.5" width="300" height="145"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="20X-CS-9Ae">
+                                        <rect key="frame" x="0.0" y="329.5" width="300" height="144.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YZZ-mP-Q5L">
+                                                <rect key="frame" x="55" y="0.0" width="190" height="144.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="km8-WO-EuZ">
+                                                        <rect key="frame" x="0.0" y="47" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="km8-WO-EuZ" secondAttribute="height" multiplier="1:1" id="rkt-Oi-7fD"/>
+                                                        </constraints>
+                                                        <state key="normal" backgroundImage="twitter"/>
+                                                        <connections>
+                                                            <action selector="twitterBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hFT-gh-4cT"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ft5-dJ-Cp0">
+                                                        <rect key="frame" x="70" y="47" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="ft5-dJ-Cp0" secondAttribute="height" multiplier="1:1" id="zch-XG-vzO"/>
+                                                        </constraints>
+                                                        <state key="normal" backgroundImage="facebook"/>
+                                                        <connections>
+                                                            <action selector="facebookBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ErZ-CS-Dn8"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wi-Uf-Y5l">
+                                                        <rect key="frame" x="140" y="47" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="5Wi-Uf-Y5l" secondAttribute="height" multiplier="1:1" id="9eI-2N-1EB"/>
+                                                        </constraints>
+                                                        <state key="normal" backgroundImage="mail"/>
+                                                        <connections>
+                                                            <action selector="mailBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mDU-ij-7xc"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <variation key="heightClass=regular-widthClass=regular" spacing="40"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=regular-widthClass=regular" spacing="40"/>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ms7-gM-Yaa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="HGQ-hD-P3S"/>
+                            <constraint firstAttribute="trailing" secondItem="ms7-gM-Yaa" secondAttribute="trailing" constant="10" id="J8w-4u-f3L"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ms7-gM-Yaa" secondAttribute="bottom" id="ShQ-GY-3gz"/>
+                            <constraint firstItem="ms7-gM-Yaa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="gi0-fS-BNB"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="mBZ-qB-afc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="DYO-zB-A5j">
+                            <connections>
+                                <action selector="addImage:" destination="BYZ-38-t0r" id="glD-6s-P1o"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="facebookBtn" destination="ft5-dJ-Cp0" id="IPK-XA-eHH"/>
+                        <outlet property="imgView" destination="wbd-dN-xvn" id="fww-5m-kHO"/>
+                        <outlet property="mailBtn" destination="5Wi-Uf-Y5l" id="Qmv-qP-rxo"/>
+                        <outlet property="myTextView" destination="l4k-0k-qxS" id="cyH-wS-Iuq"/>
+                        <outlet property="twitterBtn" destination="km8-WO-EuZ" id="e3c-0J-wox"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2013.5999999999999" y="136.28185907046478"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xpi-yE-8vV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kBw-1h-jRv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pUz-CK-utG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cZ3-5G-p97"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gg4-ob-SZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="facebook" width="50" height="50"/>
+        <image name="mail" width="50" height="50"/>
+        <image name="twitter" width="50" height="50"/>
+    </resources>
 </document>
